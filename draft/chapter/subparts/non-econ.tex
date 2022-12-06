@@ -1,0 +1,55 @@
+\subsection{Non-economic applications of epi models}\label{subsec:nonecon}\hypertarget{nonecon}{}
+
+This section highlights the elements of epidemiologicial modeling in other fields that might be of most value to economists.
+
+We focus on the following three areas:
+\begin{verbatimwrite}{./Slides/NonEcon}
+\begin{enumerate}
+    \item the spread of news, fake news, and rumors
+    \item the diffusion of scientific ideas
+    \item the dissemination pattern of internet content such as memes
+\end{enumerate}
+\end{verbatimwrite}
+\input{./Slides/NonEcon}
+
+The first epidemiological model we have been able to find in which rumors spread like disease is by \cite{daley1964epidemics}, whose work spurred a subsequent literature that explored variants of the standard epidemiological model allowing for different `compartments.'  A highly cited example is a paper by \cite{jin2013epidemiological} that augments the usual three compartments of Susceptible, Infected, and Exposed with another compartment of skeptics, and estimates the model with a diffusion pattern of eight real events among Twitter users, including actual news events such as the Boston Marathon Bombings, the resignation of Pope Benedict, and rumors such as Doomsday, an injury to President Obama, etc. (See Figure \ref{fig:news_curve}). The augmented model with estimated parameters matches the dynamics of both news and rumors reasonably well.
+
+\begin{center}
+	[Insert Figure \ref{fig:news_curve}  here]
+\end{center}
+
+Some other empirical studies on the dynamics of news spreading may provide useful information for modeling choices even if they were not explicitly aimed at estimating structural parameters of a specific epidemiological model. For instance, some work has found that features of the information can affect its infectiousness:  \href{https://science.sciencemag.org/content/359/6380/1146}{\cite{vosoughi_spread_2018}} found that falsehood spreads faster than the truth possibly because of its novelty and emotional arousal.
+
+Similarly, \href{https://journals.sagepub.com/doi/10.1509/jmr.10.0353}{\cite{berger2012makes}} found that emotional arousal matters for virality of online-content: ``content that evokes high-arousal positive (awe) or negative (anger or anxiety) emotions is more viral. Content that evokes low-arousal, or deactivating, emotions (e.g., sadness) is less viral.'' Moreover,  \href{https://arxiv.org/abs/1805.12512}{\cite{zannettou2018origins}} found that content of memes affect their virality: racist and political memes are the most common type of viral content.
+
+%About 126,000 rumors were spread by ∼3 million people. False news reached more people than the truth; the top 1% of false news cascades diffused to between 1000 and 100,000 people, whereas the truth rarely diffused to more than 1000 people. ...We found that false news was more novel than true news, which suggests that people were more likely to share novel information. Whereas false stories inspired fear, disgust, and surprise in replies, true stories inspired anticipation, sadness, joy, and trust. Contrary to conventional wisdom, robots accelerated the spread of true and false news at the same rate, implying that false news spreads more than the truth because humans, not robots, are more likely to spread it.
+
+Some research examines the spread of fake news and misinformation from other angles but contains insights for modeling choices.
+
+\href{https://github.com/iworld1991/EpiExp/blob/master/Literature/allcott2017social.pdf}{\cite{allcott2017social}} used a post-2016 election survey of 1200 U.S. adults to analyze the importance of social media on fake news consumption, exposure to fake news, and partisan composition. The paper highlights social media as one of the important (but not dominant) channels for the diffusion of fake news.  The paper  constructs a model with a supply side of the fake news provided by profit-maximizing entities appealing to consumers subject to confirmation bias. This seems a natural extension of standard epidemiological models to incorporate the production side of the information.
+
+\href{https://www.kdd.org/exploration_files/8._CR.10.Misinformation_in_social_media_-_Final.pdf}{\cite{acemoglu2010spread}} builds a model of social learning with ``forceful'' agents who disregard information updating from other agents in the network. The presence of such agents may lead to the persistence of misinformation in equilibrium. The insight from this paper for epidemiological modeling is that heterogeneity in susceptibility or infectiousness can affect the ultimate mean outcome.
+
+Epidemiological models have also been used to patterns in the spread of scientific ideas, in a literature closely related to the one discussed above on the diffusion of technology.   \href{https://github.com/iworld1991/EpiExp/blob/master/Literature/bettencourt2006power.pdf}{\cite{bettencourt2006power}} estimates an epidemiological model of the spread of Feynman diagrams through theoretical physics communities. It used an SEIR model where E represents the exposed state and SEIZ model where Z represents skeptics (mutually  exclusive with being infected) due to competing ideas. The paper suggests that introducing skeptics generates an additional steady state of the model where competing ideas coexist. This differs from two-compartment and three-compartment models in which typically the system converges to a single state.
+
+\begin{center}
+			[Insert Figure \ref{fig:science_ideas_curve} here]
+\end{center}
+
+Internet memes have been another favorite topic of epidemiological modelers.  \href{https://github.com/iworld1991/EpiExp/blob/master/Literature/bauckhage2011insights.pdf}{\cite{bauckhage2011insights}} shows that both epidemiological models and log-normal distribution could characterize the growth and decay of famous internet memes (See Figure \ref{fig:memes_curve}).  Similarly,  \href{https://github.com/iworld1991/EpiExp/blob/master/Literature/kucharski2016modelling.pdf}{\cite{kucharski2016modelling}} fits an epidemiological model to outbreaks of a number of notable internet contagion such as ``ice bucket challenge'' and ``no-makeup selfies,'' suggesting a reproduction ratio in the range of 1.9 to 2.5.
+
+%	\href{http://cs.stanford.edu/~ashton/pubs/twiral.pdf}{\cite{goel2016structural}} explores the structural factors (independent from the intrinsic properties of the content, nature of contact process, etc.) that seem to determine whether a news story spreads more effectively from a ``broadcast'' (common-source) or from a `viral' (person-to-person) mechanism.
+
+
+	% Internet memes are increasingly used to sway and manipulate public opinion. This prompts the need to study their propagation, evolution, and influence across the Web. In this paper, we detect and measure the propagation of memes across multiple Web communities, using a processing pipeline based on perceptual hashing and clustering techniques, and a dataset of 160M images from 2.6B posts gathered from Twitter, Reddit, 4chan's Politically Incorrect board (/pol/), and Gab, over the course of 13 months. We group the images posted on fringe Web communities (/pol/, Gab, and The_Donald subreddit) into clusters, annotate them using meme metadata obtained from Know Your Meme, and also map images from mainstream communities (Twitter and Reddit) to the clusters. Our analysis provides an assessment of the popularity and diversity of memes in the context of each community, showing, e.g., that racist memes are extremely common in fringe Web communities. We also find a substantial number of politics-related memes on both mainstream and fringe Web communities, supporting media reports that memes might be used to enhance or harm politicians. Finally, we use Hawkes processes to model the interplay between Web communities and quantify their reciprocal influence, finding that /pol/ substantially influences the meme ecosystem with the number of memes it produces, while \td has a higher success rate in pushing them to other communities.
+
+There is also a methodological insight contained in these studies to economists. With the increasing availability of formal and informal human conversations/writings disseminated in the public sphere research, economists should collect these data and better analyze them, as a fruitful supplement to the traditional form of quantitative data from surveys and statistical agencies. What has gradually emerged as a field under the name of ``narrative economics'' \citep{shiller1995conversation,shiller2017narrative} is an example of this. There is also a rapidly expanding sphere of that tries to answer economic questions by analyzing a large volume of textual/conversational information from the well developed technique of natural language processing (NLP).\footnote{See \cite{tetlock_giving_2007}, \cite{soo_quantifying_2015}, \cite{gentzkow2019text}, \cite{bybee2020structure}, \cite{ash2021text}.}
+\begin{center}
+			[Insert Figure \ref{fig:memes_curve} here]
+\end{center}
+
+
+
+		% quote: "suggested diversity in patterns in viral content between common-source models or decentralized interpersonal infection models, based on an analysis billion diffusion events on Twitter, including the propagation of news stories, videos, images, and petitions. ". abstract: Viral products and ideas are intuitively understood to grow through a person-to-person diffusion process analogous to the spread of an infectious disease; however, until recently it has been prohibitively difficult to directly observe purportedly viral events, and thus to rigorously quantify or characterize their structural properties. Here we propose a formal measure of what we label “structural virality” that interpolates between two conceptual extremes: content that gains its popularity through a single, large broadcast, and that which grows through multiple generations with any one individual directly responsible for only a fraction of the total adoption. We use this notion of structural virality to analyze a unique dataset of a billion diffusion events on Twitter, including the propagation of news stories, videos, images, and petitions. We find that across all domains and all sizes of events, online diffusion is characterized by surprising structural diversity. Popular events, that is, regularly grow via both broadcast and viral mechanisms, as well as essentially all conceivable combinations of the two. Correspondingly, we find that the correlation between the size of an event and its structural virality is surprisingly low, meaning that knowing how popular a piece of content is tells one little about how it spread. Finally, we attempt to replicate these findings with a model of contagion characterized by a low infection rate spreading on a scale-free network. We find that while several of our empirical findings are consistent with such a model, it does not replicate the observed diversity of structural virality.
+
+
